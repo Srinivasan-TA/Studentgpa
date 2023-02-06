@@ -10,16 +10,16 @@ import java.util.logging.Logger;
      private double gpa;
 
      Student(String name, int age, double gpa) {
-         SetAge(age);
-         SetGpa(gpa);
-         SetName(name);
+         setAge(age);
+         setGpa(gpa);
+         setName(name);
      }
 
      public String getName() {
          return name;
      }
 
-     public void SetName(String name) {
+     public void setName(String name) {
          this.name = name;
      }
 
@@ -27,7 +27,7 @@ import java.util.logging.Logger;
          return age;
      }
 
-     public void SetAge(int age) {
+     public void setAge(int age) {
          this.age = age;
      }
 
@@ -35,7 +35,7 @@ import java.util.logging.Logger;
          return gpa;
      }
 
-     public void SetGpa(double gpa) {
+     public void setGpa(double gpa) {
          this.gpa = gpa;
      }
  }
