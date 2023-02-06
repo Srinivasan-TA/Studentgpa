@@ -2,6 +2,8 @@ package org.example;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.logging.Logger;
+
  class Student {
      private String name;
      private int age;
@@ -37,21 +39,22 @@ import java.util.ArrayList;
          this.gpa = gpa;
      }
  }
+
      public class Main {
          public static void main(String[] args) {
+             Logger l = Logger.getLogger("com.api.jar");
              List<Student> students = new ArrayList<>();
              students.add(new Student("Sri", 22, 4.5));
              students.add(new Student("ruch", 21, 3.7));
              students.add(new Student("Bar", 21, 3.6));
-
-             System.out.println("Original List:");
+             l.info("Original List:");
              for (Student student : students) {
-                 System.out.println("Name: " + student.getName() + ", Age: " + student.getAge() + ", GPA: " + student.getGpa());
+                 l.info("Name: " + student.getName() + ", Age: " + student.getAge() + ", GPA: " + student.getGpa());
              }
              Collections.sort(students, (s1, s2) -> Double.compare(s2.getGpa(), s1.getGpa()));
-             System.out.println("\nSorted List:");
+             l.info("\nSorted List:");
              for (Student student : students) {
-                 System.out.println("Name: " + student.getName() + ", GPA: " + student.getGpa());
+                 l.info("Name: " + student.getName() + ", GPA: " + student.getGpa());
              }
          }
  }
